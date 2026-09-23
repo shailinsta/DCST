@@ -1,0 +1,11 @@
+Component / Model,Test AUC,Test AUPRC
+DCST_Full_NP (HGT + GRU),0.500,0.460
+Hierarchical Bayesian twin (SVI),0.716,0.786
+Adaptive DP-FedAvg (private),0.693,—
+Adaptive DP-FedAvg (non-private),0.716,—
+GraphSAGE (mean aggregator),0.750,0.693
+MarsGT-style (rarity-aware),0.716,0.742
+GAT (additive attention),0.591,0.591
+GCN (Kipf & Welling),0.580,0.609
+HAN (node + semantic),0.432,0.470
+HGT (literature baseline),0.421,0.418

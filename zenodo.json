@@ -1,0 +1,54 @@
+{
+  "title": "DCST: Dynamic Causal Spatiotemporal Digital Twins for Individualized Treatment-Response Prediction in Pancreatic Ductal Adenocarcinoma",
+  "description": "Source code, experimental notebook (Google Colab–ready), figures, and summary results for DCST — a systems-level architecture combining multi-scale residual Heterogeneous Graph Transformer, hierarchical Bayesian digital twin, uncertainty-aware causal intervention planner, and adaptive DP-FedAvg for PDAC treatment-response prediction. Evaluated under a leakage-free protocol on a signal-controlled in-silico cohort (N=800) and real TCGA-PAAD clinical data (N=92).",
+  "upload_type": "software",
+  "publication_date": "2026-09-23",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Mishra, Shailendra",
+      "affiliation": "Department of Computer Engineering, College of Computer and Information Sciences, Majmaah University, Al Majmaah 11952, Saudi Arabia",
+      "orcid": ""
+    },
+    {
+      "name": "Rathi, Megha",
+      "affiliation": "Department of CSE & IT, Jaypee Institute of Information Technology, Noida, India"
+    },
+    {
+      "name": "Agarwal, Himani",
+      "affiliation": "Department of CSE & IT, Jaypee Institute of Information Technology, Noida, India"
+    },
+    {
+      "name": "Mishra, Saumya",
+      "affiliation": "Department of Computer Science and Engineering, Motilal Nehru National Institute of Technology Allahabad, Prayagraj, India"
+    }
+  ],
+  "keywords": [
+    "pancreatic ductal adenocarcinoma",
+    "digital twin",
+    "heterogeneous graph transformer",
+    "Bayesian inference",
+    "causal intervention planning",
+    "federated learning",
+    "differential privacy",
+    "treatment response prediction",
+    "multi-omics",
+    "Google Colab"
+  ],
+  "access_right": "open",
+  "license": "mit",
+  "related_identifiers": [
+    {
+      "identifier": "https://portal.gdc.cancer.gov/projects/TCGA-PAAD",
+      "relation": "references",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32676",
+      "relation": "references",
+      "resource_type": "dataset"
+    }
+  ],
+  "communities": [],
+  "notes": "Datasets (TCGA-PAAD, GSE32676, CPTAC-PDAC) are not redistributed. Obtain them from the original public sources listed in README.md and the manuscript Section IV-A. Replace YOUR_USERNAME in repository URLs after creating the GitHub repository."
+}

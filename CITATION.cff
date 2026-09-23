@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "DCST: Dynamic Causal Spatiotemporal Digital Twins for Individualized Treatment-Response Prediction in Pancreatic Ductal Adenocarcinoma"
+version: "1.0.0"
+date-released: "2026-09-23"
+authors:
+  - family-names: Mishra
+    given-names: Shailendra
+    email: s.mishra@mu.edu.sa
+    affiliation: "Department of Computer Engineering, College of Computer and Information Sciences, Majmaah University, Al Majmaah 11952, Saudi Arabia"
+  - family-names: Rathi
+    given-names: Megha
+    affiliation: "Department of CSE & IT, Jaypee Institute of Information Technology, Noida, India"
+  - family-names: Agarwal
+    given-names: Himani
+    affiliation: "Department of CSE & IT, Jaypee Institute of Information Technology, Noida, India"
+  - family-names: Mishra
+    given-names: Saumya
+    affiliation: "Department of Computer Science and Engineering, Motilal Nehru National Institute of Technology Allahabad, Prayagraj, India"
+keywords:
+  - pancreatic ductal adenocarcinoma
+  - digital twin
+  - heterogeneous graph transformer
+  - Bayesian inference
+  - causal intervention planning
+  - federated learning
+  - differential privacy
+  - treatment response prediction
+  - multi-omics
+license: MIT
+repository-code: "https://github.com/YOUR_USERNAME/DCST"
+abstract: >-
+  DCST models each PDAC patient as a multi-scale spatiotemporal dynamical system,
+  unifying a residual Heterogeneous Graph Transformer, hierarchical Bayesian digital twin,
+  uncertainty-aware causal planner, and adaptive DP-FedAvg under differential privacy.
+  Leakage-free evaluation on an in-silico cohort (N=800) and real TCGA-PAAD (N=92).
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Mishra
+      given-names: Shailendra
+    - family-names: Rathi
+      given-names: Megha
+    - family-names: Agarwal
+      given-names: Himani
+    - family-names: Mishra
+      given-names: Saumya
+  title: "DCST: Dynamic Causal Spatiotemporal Digital Twins for Individualized Treatment-Response Prediction in Pancreatic Ductal Adenocarcinoma"
+  journal: "IEEE Journal of Biomedical and Health Informatics"
+  year: 2026
+  notes: "Under review"

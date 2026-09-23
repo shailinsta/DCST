@@ -1,0 +1,5 @@
+Source,Modality,Role,N,Reported in
+In silico generator,Gene/miRNA/protein + clinical,Primary; planted biomarkers,800,Section V-A–D
+TCGA-PAAD (GDC),Clinical covariates,Primary real cohort; 5×5 CV,92,Section V-E
+GSE32676 (GEO),Expression microarray,Supplementary validation,32,Section V-G
+CPTAC-PDAC clinical,Clinical covariates,Supplementary validation,166,Section V-G

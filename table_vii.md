@@ -1,0 +1,10 @@
+# TABLE VII — Paired Wilcoxon signed-rank tests on the 25 real CV folds
+
+| Comparison | Δ (mean AUC) | p-value |
+| --- | --- | --- |
+| DCST_Small vs. Elastic-Net | +0.014 | 0.605 |
+| Voted Ensemble vs. Elastic-Net | +0.020 | 0.076 |
+| DCST_Small vs. Random Forest | +0.018 | 0.563 |
+| DCST_Small vs. Gradient Boosting | +0.003 | 0.895 |
+| DCST_Small vs. SVM (RBF) | +0.005 | 0.784 |
+| Voted Ensemble vs. SVM (RBF) | +0.011 | 0.475 |

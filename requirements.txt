@@ -1,0 +1,18 @@
+# DCST — Python dependencies (Google Colab / local)
+# Core scientific stack (usually pre-installed in Colab)
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+scikit-learn>=1.2
+matplotlib>=3.6
+seaborn>=0.12
+
+# Optional deep learning / privacy (install when network and GPU available)
+# torch>=2.0
+# pyro-ppl>=1.8
+# opacus>=1.4
+# torch-geometric>=2.3
+# xgboost>=1.7
+
+# Utilities
+tqdm>=4.64

@@ -1,0 +1,9 @@
+Dimension,"Typical studies [7–9,14,22]",Present work
+Primary goal,Maximise real-data discrimination/C-index,Establish leakage-free protocol; test biomarker recovery
+Data regime,"Real multi-omics, often large N",In silico (N=800) + limited real clinical (N=92)
+Architecture,Heterogeneous GNN/HGT/multi-modal fusion,Capacity-matched residual GAT + MC-dropout
+Evaluation discipline,Standard train/test or CV,Patient-level stratification; strict train-only preprocessing
+Internal validity check,Rarely available,Explicit recovery of 3 planted biomarkers
+Privacy/federation,"Sometimes reported [7,14]",Specified; single-split execution reported
+Digital twin/causal modules,"Active area [10,12,16,18,24]",Specified; single-split execution reported
+Honest negative result,Infrequently reported,Real AUC ≈ 0.57 with high variance

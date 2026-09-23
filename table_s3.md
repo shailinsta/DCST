@@ -1,0 +1,16 @@
+# TABLE S3 — Hyper-parameters for the residual graph-attention proxy and full-architecture components
+
+| Component | Key hyper-parameters |
+| --- | --- |
+| DCST proxy (in silico) | Hidden 64, 2 residual GAT layers, dropout 0.15, AdamW, early stop on
+val AUC, k=8 |
+| DCST_Small (real, N=92) | Hidden 24, 1 GAT layer, dropout 0.4, k=6, top-15 MI features,
+train-fold-only oversampling |
+| Bayesian twin (SVI) | Mean-field Gaussian guide, reparameterisation trick, closed-form KL,
+MC samples at inference |
+| DP-FedAvg | C=1.0, σ=1.1, 4 simulated clients, 8 rounds, 3 local epochs,
+lr=0.05, δ=1/(2N_train) |
+| Causal planner | λ=0.5, interventions: ever_fluorouracil, ever_gemcitabine,
+ever_oxaliplatin |
+| Graph baselines | Identical split (58/15/19); HAN/HGT use second meta-path over
+treatment-history features |

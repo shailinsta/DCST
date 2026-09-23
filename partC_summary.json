@@ -1,0 +1,35 @@
+{
+  "paper": "DCST: Dynamic Causal Spatiotemporal Digital Twins for Individualized Treatment-Response Prediction in Pancreatic Ductal Adenocarcinoma",
+  "version": "1.0.0",
+  "seed": 42,
+  "dcst_proxy_insilico_test": {
+    "n_test": 160,
+    "auc_roc": 0.7052,
+    "auprc": 0.7160,
+    "accuracy": 0.6562,
+    "f1": 0.7150,
+    "mcc": 0.3222,
+    "brier": 0.2319,
+    "auc_ci_95": [0.619, 0.787],
+    "auprc_ci_95": [0.614, 0.811]
+  },
+  "real_tcga_paad_5x5_cv": {
+    "n": 92,
+    "dcst_small_auc_mean_sd": [0.576, 0.128],
+    "band_all_models": [0.56, 0.58],
+    "wilcoxon_all_pairwise_p_gt": 0.05
+  },
+  "full_architecture_single_split": {
+    "split": "58/15/19",
+    "dcst_full_np_hgt_gru": {"test_auc": 0.5, "test_auprc": 0.46},
+    "bayesian_twin_svi": {"test_auc": 0.716, "test_auprc": 0.786},
+    "dp_fedavg_private": {"test_auc": 0.693, "noise_multiplier": 1.1, "clip_norm": 1.0, "rounds": 8, "n_clients": 4, "epsilon_basic_composition_approx": 1032.5},
+    "dp_fedavg_nonprivate": {"test_auc": 0.716}
+  },
+  "supplementary_checks": {
+    "gse32676_heldout_auc_dcst_small": 0.917,
+    "cptac_pdac_progression_auc_logistic": 0.595
+  },
+  "planted_biomarkers_recovered": ["PROT_029", "PROT_055", "MIR_065"],
+  "notes": "Full tables and limitations in the manuscript and Supplementary Materials. Privacy epsilon is a loose basic-composition bound, not a tight Renyi-DP certificate. Client partitions for DP-FedAvg are simulated (no real site field in clinical.tsv)."
+}

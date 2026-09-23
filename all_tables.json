@@ -1,0 +1,675 @@
+[
+  {
+    "id": "table_i",
+    "caption": "TABLE I — Data sources used in the experimental evaluation",
+    "source": "main",
+    "n_rows": 5,
+    "n_cols": 5,
+    "csv": "tables/table_i.csv",
+    "md": "tables/table_i.md",
+    "data": [
+      [
+        "Source",
+        "Modality",
+        "Role",
+        "N",
+        "Reported in"
+      ],
+      [
+        "In silico generator",
+        "Gene/miRNA/protein + clinical",
+        "Primary; planted biomarkers",
+        "800",
+        "Section V-A–D"
+      ],
+      [
+        "TCGA-PAAD (GDC)",
+        "Clinical covariates",
+        "Primary real cohort; 5×5 CV",
+        "92",
+        "Section V-E"
+      ],
+      [
+        "GSE32676 (GEO)",
+        "Expression microarray",
+        "Supplementary validation",
+        "32",
+        "Section V-G"
+      ],
+      [
+        "CPTAC-PDAC clinical",
+        "Clinical covariates",
+        "Supplementary validation",
+        "166",
+        "Section V-G"
+      ]
+    ]
+  },
+  {
+    "id": "table_ii",
+    "caption": "TABLE II — Test-set performance of the DCST proxy (N = 160)",
+    "source": "main",
+    "n_rows": 9,
+    "n_cols": 2,
+    "csv": "tables/table_ii.csv",
+    "md": "tables/table_ii.md",
+    "data": [
+      [
+        "Metric",
+        "Value"
+      ],
+      [
+        "AUC-ROC",
+        "0.7052"
+      ],
+      [
+        "AUPRC",
+        "0.7160"
+      ],
+      [
+        "Accuracy",
+        "0.6562"
+      ],
+      [
+        "Precision",
+        "0.6273"
+      ],
+      [
+        "Recall",
+        "0.8313"
+      ],
+      [
+        "F1",
+        "0.7150"
+      ],
+      [
+        "MCC",
+        "0.3222"
+      ],
+      [
+        "Brier score",
+        "0.2319"
+      ]
+    ]
+  },
+  {
+    "id": "table_iii",
+    "caption": "TABLE III — Comparative performance on the in-silico test set (N = 160)",
+    "source": "main",
+    "n_rows": 8,
+    "n_cols": 7,
+    "csv": "tables/table_iii.csv",
+    "md": "tables/table_iii.md",
+    "data": [
+      [
+        "Model",
+        "AUC",
+        "AUPRC",
+        "Acc.",
+        "F1",
+        "MCC",
+        "Brier"
+      ],
+      [
+        "Elastic-Net",
+        "0.729",
+        "0.740",
+        "0.656",
+        "0.678",
+        "0.311",
+        "0.214"
+      ],
+      [
+        "Stacked (DCST+EN)",
+        "0.724",
+        "0.727",
+        "0.663",
+        "0.682",
+        "0.323",
+        "0.211"
+      ],
+      [
+        "XGBoost",
+        "0.710",
+        "0.735",
+        "0.631",
+        "0.655",
+        "0.260",
+        "0.226"
+      ],
+      [
+        "DCST (single)",
+        "0.705",
+        "0.716",
+        "0.656",
+        "0.715",
+        "0.322",
+        "0.232"
+      ],
+      [
+        "Random Forest",
+        "0.690",
+        "0.695",
+        "0.594",
+        "0.596",
+        "0.189",
+        "0.221"
+      ],
+      [
+        "HistGradientBoosting",
+        "0.678",
+        "0.697",
+        "0.613",
+        "0.627",
+        "0.224",
+        "0.256"
+      ],
+      [
+        "Clinical-only logistic",
+        "0.662",
+        "0.649",
+        "0.638",
+        "0.692",
+        "0.277",
+        "0.236"
+      ]
+    ]
+  },
+  {
+    "id": "table_iv",
+    "caption": "TABLE IV — Modality ablation on the in silico test set",
+    "source": "main",
+    "n_rows": 6,
+    "n_cols": 6,
+    "csv": "tables/table_iv.csv",
+    "md": "tables/table_iv.md",
+    "data": [
+      [
+        "Feature set",
+        "AUC",
+        "AUPRC",
+        "Acc.",
+        "F1",
+        "MCC"
+      ],
+      [
+        "Clinical",
+        "0.663",
+        "0.649",
+        "0.638",
+        "0.692",
+        "0.277"
+      ],
+      [
+        "Proteomics",
+        "0.707",
+        "0.712",
+        "0.675",
+        "0.679",
+        "0.351"
+      ],
+      [
+        "miRNA",
+        "0.603",
+        "0.612",
+        "0.569",
+        "0.601",
+        "0.134"
+      ],
+      [
+        "Genes",
+        "0.713",
+        "0.716",
+        "0.663",
+        "0.700",
+        "0.325"
+      ],
+      [
+        "All modalities",
+        "0.718",
+        "0.733",
+        "0.650",
+        "0.663",
+        "0.299"
+      ]
+    ]
+  },
+  {
+    "id": "table_v",
+    "caption": "TABLE V — Mean AUC ± SD across three independent in silico partitions",
+    "source": "main",
+    "n_rows": 5,
+    "n_cols": 3,
+    "csv": "tables/table_v.csv",
+    "md": "tables/table_v.md",
+    "data": [
+      [
+        "Model",
+        "Recorded",
+        "NumPy reproduction"
+      ],
+      [
+        "DCST (single)",
+        "0.740 ± 0.049",
+        "0.740 ± 0.049"
+      ],
+      [
+        "DCST Ensemble",
+        "0.756 ± 0.063",
+        "0.756 ± 0.063"
+      ],
+      [
+        "Elastic-Net",
+        "0.794 ± 0.037",
+        "0.794 ± 0.037"
+      ],
+      [
+        "Stacked",
+        "0.788 ± 0.049",
+        "0.788 ± 0.049"
+      ]
+    ]
+  },
+  {
+    "id": "table_vi",
+    "caption": "TABLE VI — Repeated 5×5 cross-validation on real TCGA-PAAD clinical data (N = 92)",
+    "source": "main",
+    "n_rows": 7,
+    "n_cols": 7,
+    "csv": "tables/table_vi.csv",
+    "md": "tables/table_vi.md",
+    "data": [
+      [
+        "Model",
+        "AUC (mean ± SD)",
+        "AUPRC",
+        "Acc.",
+        "F1",
+        "MCC",
+        "Brier"
+      ],
+      [
+        "Voted Ensemble",
+        "0.582 ± 0.137",
+        "0.587",
+        "0.548",
+        "0.493",
+        "0.098",
+        "0.248"
+      ],
+      [
+        "DCST_Small",
+        "0.576 ± 0.128",
+        "0.585",
+        "0.571",
+        "0.533",
+        "0.169",
+        "0.245"
+      ],
+      [
+        "Gradient Boosting",
+        "0.573 ± 0.144",
+        "0.583",
+        "0.548",
+        "0.476",
+        "0.085",
+        "0.273"
+      ],
+      [
+        "SVM (RBF)",
+        "0.572 ± 0.147",
+        "0.558",
+        "0.543",
+        "0.515",
+        "0.097",
+        "0.256"
+      ],
+      [
+        "Elastic-Net",
+        "0.562 ± 0.135",
+        "0.568",
+        "0.528",
+        "0.523",
+        "0.075",
+        "0.248"
+      ],
+      [
+        "Random Forest",
+        "0.558 ± 0.139",
+        "0.556",
+        "0.554",
+        "0.482",
+        "0.106",
+        "0.248"
+      ]
+    ]
+  },
+  {
+    "id": "table_vii",
+    "caption": "TABLE VII — Paired Wilcoxon signed-rank tests on the 25 real CV folds",
+    "source": "main",
+    "n_rows": 7,
+    "n_cols": 3,
+    "csv": "tables/table_vii.csv",
+    "md": "tables/table_vii.md",
+    "data": [
+      [
+        "Comparison",
+        "Δ (mean AUC)",
+        "p-value"
+      ],
+      [
+        "DCST_Small vs. Elastic-Net",
+        "+0.014",
+        "0.605"
+      ],
+      [
+        "Voted Ensemble vs. Elastic-Net",
+        "+0.020",
+        "0.076"
+      ],
+      [
+        "DCST_Small vs. Random Forest",
+        "+0.018",
+        "0.563"
+      ],
+      [
+        "DCST_Small vs. Gradient Boosting",
+        "+0.003",
+        "0.895"
+      ],
+      [
+        "DCST_Small vs. SVM (RBF)",
+        "+0.005",
+        "0.784"
+      ],
+      [
+        "Voted Ensemble vs. SVM (RBF)",
+        "+0.011",
+        "0.475"
+      ]
+    ]
+  },
+  {
+    "id": "table_viii",
+    "caption": "TABLE VIII — Single-split results for full-architecture components and graph-neural baselines (TCGA-PAAD, test N = 19)",
+    "source": "main",
+    "n_rows": 11,
+    "n_cols": 3,
+    "csv": "tables/table_viii.csv",
+    "md": "tables/table_viii.md",
+    "data": [
+      [
+        "Component / Model",
+        "Test AUC",
+        "Test AUPRC"
+      ],
+      [
+        "DCST_Full_NP (HGT + GRU)",
+        "0.500",
+        "0.460"
+      ],
+      [
+        "Hierarchical Bayesian twin (SVI)",
+        "0.716",
+        "0.786"
+      ],
+      [
+        "Adaptive DP-FedAvg (private)",
+        "0.693",
+        "—"
+      ],
+      [
+        "Adaptive DP-FedAvg (non-private)",
+        "0.716",
+        "—"
+      ],
+      [
+        "GraphSAGE (mean aggregator)",
+        "0.750",
+        "0.693"
+      ],
+      [
+        "MarsGT-style (rarity-aware)",
+        "0.716",
+        "0.742"
+      ],
+      [
+        "GAT (additive attention)",
+        "0.591",
+        "0.591"
+      ],
+      [
+        "GCN (Kipf & Welling)",
+        "0.580",
+        "0.609"
+      ],
+      [
+        "HAN (node + semantic)",
+        "0.432",
+        "0.470"
+      ],
+      [
+        "HGT (literature baseline)",
+        "0.421",
+        "0.418"
+      ]
+    ]
+  },
+  {
+    "id": "table_ix",
+    "caption": "TABLE IX — Research questions and findings",
+    "source": "main",
+    "n_rows": 6,
+    "n_cols": 4,
+    "csv": "tables/table_ix.csv",
+    "md": "tables/table_ix.md",
+    "data": [
+      [
+        "ID",
+        "Question",
+        "Setting",
+        "Finding"
+      ],
+      [
+        "RQ1",
+        "Recovery of planted biomarkers under leakage-free protocol?",
+        "In silico (N=800)",
+        "PROT_029/055, MIR_065 recovered; AUC 0.705 [0.619–0.787]"
+      ],
+      [
+        "RQ2",
+        "DCST vs. classical baselines, identical conditions?",
+        "In silico test (N=160)",
+        "EN 0.729 > stack 0.722 > XGB 0.710 > DCST 0.705; DCST best\nMCC/F1"
+      ],
+      [
+        "RQ3",
+        "Does multi-modal fusion help?",
+        "Modality ablation",
+        "All 0.718 > genes 0.713 > proteomics 0.707 > clinical\n0.663"
+      ],
+      [
+        "RQ4",
+        "Discrimination from clinical variables alone, real data?",
+        "Real (N=92), 5×5 CV",
+        "All models AUC 0.56–0.58; no pairwise difference significant"
+      ],
+      [
+        "RQ5",
+        "Stability across partitions; does regularisation rescue sub-chance\nmodel?",
+        "3 partitions; real remediation",
+        "EN most stable (0.794±0.037); real DCST rose from ≈0.456 to\n0.572"
+      ]
+    ]
+  },
+  {
+    "id": "table_s1",
+    "caption": "TABLE S1 — Positioning relative to selected 2025–2026 studies",
+    "source": "supp",
+    "n_rows": 9,
+    "n_cols": 5,
+    "csv": "tables/table_s1.csv",
+    "md": "tables/table_s1.md",
+    "data": [
+      [
+        "Method (venue)",
+        "Task / data (N)",
+        "Discrimination",
+        "Privacy/federation",
+        "Relation to present work"
+      ],
+      [
+        "Present work",
+        "PDAC response; in silico N=800, real N=92",
+        "In silico AUC 0.705 [0.619–0.787]; real 0.572±0.141",
+        "DP-FedAvg (single-split)",
+        "Controlled biomarker recovery; leakage audit; honest small-N\nranking"
+      ],
+      [
+        "ExplainMIX [8]",
+        "Drug-response, multi-omics",
+        "Typically >0.75",
+        "None",
+        "Stronger real discrimination; not claimed to be surpassed"
+      ],
+      [
+        "GraphTCDR [9]",
+        "Cancer drug response",
+        "Competitive with SOTA",
+        "None",
+        "Real multi-omics evaluation planned for next phase"
+      ],
+      [
+        "SMOGT [22]",
+        "Cell-fate, single-cell/bulk",
+        "Improved over vanilla HGT",
+        "None",
+        "Architectural relative of DCST's full HGT"
+      ],
+      [
+        "FedProt [14]",
+        "Multicentre proteomics",
+        "Utility preserved under privacy",
+        "DP/secure aggregation",
+        "Privacy-preserving federation analogue"
+      ],
+      [
+        "Federated multi-omics survival [7]",
+        "Multi-omics survival cohorts",
+        "Competitive C-index under DP",
+        "Differential privacy",
+        "Analogue of DCST's DP-FedAvg"
+      ],
+      [
+        "Digital-twin oncology [10,16,18]",
+        "Neoadjuvant personalisation",
+        "Uncertainty-quantified ranking",
+        "Rarely federated",
+        "Bayesian twin module targeted for next phase"
+      ],
+      [
+        "Causal ML outcomes [12,24]",
+        "Treatment-effect estimation",
+        "Heterogeneous effects",
+        "None",
+        "Causal planner targeted for next phase"
+      ]
+    ]
+  },
+  {
+    "id": "table_s2",
+    "caption": "TABLE S2 — Contribution profile vs. typical 2025–2026 studies",
+    "source": "supp",
+    "n_rows": 9,
+    "n_cols": 3,
+    "csv": "tables/table_s2.csv",
+    "md": "tables/table_s2.md",
+    "data": [
+      [
+        "Dimension",
+        "Typical studies [7–9,14,22]",
+        "Present work"
+      ],
+      [
+        "Primary goal",
+        "Maximise real-data discrimination/C-index",
+        "Establish leakage-free protocol; test biomarker recovery"
+      ],
+      [
+        "Data regime",
+        "Real multi-omics, often large N",
+        "In silico (N=800) + limited real clinical (N=92)"
+      ],
+      [
+        "Architecture",
+        "Heterogeneous GNN/HGT/multi-modal fusion",
+        "Capacity-matched residual GAT + MC-dropout"
+      ],
+      [
+        "Evaluation discipline",
+        "Standard train/test or CV",
+        "Patient-level stratification; strict train-only preprocessing"
+      ],
+      [
+        "Internal validity check",
+        "Rarely available",
+        "Explicit recovery of 3 planted biomarkers"
+      ],
+      [
+        "Privacy/federation",
+        "Sometimes reported [7,14]",
+        "Specified; single-split execution reported"
+      ],
+      [
+        "Digital twin/causal modules",
+        "Active area [10,12,16,18,24]",
+        "Specified; single-split execution reported"
+      ],
+      [
+        "Honest negative result",
+        "Infrequently reported",
+        "Real AUC ≈ 0.57 with high variance"
+      ]
+    ]
+  },
+  {
+    "id": "table_s3",
+    "caption": "TABLE S3 — Hyper-parameters for the residual graph-attention proxy and full-architecture components",
+    "source": "supp",
+    "n_rows": 7,
+    "n_cols": 2,
+    "csv": "tables/table_s3.csv",
+    "md": "tables/table_s3.md",
+    "data": [
+      [
+        "Component",
+        "Key hyper-parameters"
+      ],
+      [
+        "DCST proxy (in silico)",
+        "Hidden 64, 2 residual GAT layers, dropout 0.15, AdamW, early stop on\nval AUC, k=8"
+      ],
+      [
+        "DCST_Small (real, N=92)",
+        "Hidden 24, 1 GAT layer, dropout 0.4, k=6, top-15 MI features,\ntrain-fold-only oversampling"
+      ],
+      [
+        "Bayesian twin (SVI)",
+        "Mean-field Gaussian guide, reparameterisation trick, closed-form KL,\nMC samples at inference"
+      ],
+      [
+        "DP-FedAvg",
+        "C=1.0, σ=1.1, 4 simulated clients, 8 rounds, 3 local epochs,\nlr=0.05, δ=1/(2N_train)"
+      ],
+      [
+        "Causal planner",
+        "λ=0.5, interventions: ever_fluorouracil, ever_gemcitabine,\never_oxaliplatin"
+      ],
+      [
+        "Graph baselines",
+        "Identical split (58/15/19); HAN/HGT use second meta-path over\ntreatment-history features"
+      ]
+    ]
+  }
+]

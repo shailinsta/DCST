@@ -1,0 +1,10 @@
+Method (venue),Task / data (N),Discrimination,Privacy/federation,Relation to present work
+Present work,"PDAC response; in silico N=800, real N=92",In silico AUC 0.705 [0.619–0.787]; real 0.572±0.141,DP-FedAvg (single-split),"Controlled biomarker recovery; leakage audit; honest small-N
+ranking"
+ExplainMIX [8],"Drug-response, multi-omics",Typically >0.75,None,Stronger real discrimination; not claimed to be surpassed
+GraphTCDR [9],Cancer drug response,Competitive with SOTA,None,Real multi-omics evaluation planned for next phase
+SMOGT [22],"Cell-fate, single-cell/bulk",Improved over vanilla HGT,None,Architectural relative of DCST's full HGT
+FedProt [14],Multicentre proteomics,Utility preserved under privacy,DP/secure aggregation,Privacy-preserving federation analogue
+Federated multi-omics survival [7],Multi-omics survival cohorts,Competitive C-index under DP,Differential privacy,Analogue of DCST's DP-FedAvg
+"Digital-twin oncology [10,16,18]",Neoadjuvant personalisation,Uncertainty-quantified ranking,Rarely federated,Bayesian twin module targeted for next phase
+"Causal ML outcomes [12,24]",Treatment-effect estimation,Heterogeneous effects,None,Causal planner targeted for next phase

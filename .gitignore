@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large / private data (do not commit)
+data/*.tsv
+data/*.csv
+data/*.txt
+data/*.h5
+data/*.pkl
+!data/README_DATA.md
+
+# Secrets
+*.pem
+credentials*
+*token*
+*secret*
+
+# Local outputs
+scratchpad/
+tmp/
+*.log

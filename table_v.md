@@ -1,0 +1,8 @@
+# TABLE V — Mean AUC ± SD across three independent in silico partitions
+
+| Model | Recorded | NumPy reproduction |
+| --- | --- | --- |
+| DCST (single) | 0.740 ± 0.049 | 0.740 ± 0.049 |
+| DCST Ensemble | 0.756 ± 0.063 | 0.756 ± 0.063 |
+| Elastic-Net | 0.794 ± 0.037 | 0.794 ± 0.037 |
+| Stacked | 0.788 ± 0.049 | 0.788 ± 0.049 |

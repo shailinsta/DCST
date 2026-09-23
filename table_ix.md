@@ -1,0 +1,13 @@
+# TABLE IX — Research questions and findings
+
+| ID | Question | Setting | Finding |
+| --- | --- | --- | --- |
+| RQ1 | Recovery of planted biomarkers under leakage-free protocol? | In silico (N=800) | PROT_029/055, MIR_065 recovered; AUC 0.705 [0.619–0.787] |
+| RQ2 | DCST vs. classical baselines, identical conditions? | In silico test (N=160) | EN 0.729 > stack 0.722 > XGB 0.710 > DCST 0.705; DCST best
+MCC/F1 |
+| RQ3 | Does multi-modal fusion help? | Modality ablation | All 0.718 > genes 0.713 > proteomics 0.707 > clinical
+0.663 |
+| RQ4 | Discrimination from clinical variables alone, real data? | Real (N=92), 5×5 CV | All models AUC 0.56–0.58; no pairwise difference significant |
+| RQ5 | Stability across partitions; does regularisation rescue sub-chance
+model? | 3 partitions; real remediation | EN most stable (0.794±0.037); real DCST rose from ≈0.456 to
+0.572 |
