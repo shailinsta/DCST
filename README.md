@@ -22,4 +22,4 @@ All tables from the IEEE JBHI manuscript and Supplementary Materials, exported f
 | `table_s3` | TABLE S3 — Hyper-parameters for the residual graph-attention proxy and full-architecture components | [table_s3.csv](table_s3.csv) | [table_s3.md](table_s3.md) |
 
 Also available as a single file: [`all_tables.json`](all_tables.json).
-https://colab.research.google.com/drive/1HS6eHdsZuMqTF73mwKKEEIS_GFhRGJBW
+
